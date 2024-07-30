@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const Technologies = () => {
   return (
-    <section className="mx-auto mt-20 max-w-screen-2xl px-8 pt-8">
+    <section
+      id="tools-and-technologies"
+      className="mx-auto mt-20 max-w-screen-2xl px-8 pt-8"
+    >
       <h1 className="my-8 text-center text-4xl font-medium md:mb-8 md:text-7xl">
         Tools & Technologies
       </h1>
