@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primaryBackground text-primaryText;
+  @apply scroll-smooth bg-primaryBackground text-primaryText;
 }
 /* border-radius: 40% 60% 49% 51% / 65% 58% 42% 35%; */
 
@@ -30,4 +30,11 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+*,
+html,
+body,
+html:focus-within {
+  scroll-behavior: smooth;
 }
