@@ -5,7 +5,10 @@ import AlyanImage from "../../../assets/pictures/alyan.png";
 
 const HeroSection = () => {
   return (
-    <div className="mx-auto flex h-[100vh] max-w-screen-2xl flex-col px-8 pt-8 md:items-center md:justify-between lg:flex-row">
+    <div
+      id="landing"
+      className="mx-auto flex h-[100vh] max-w-screen-2xl flex-col px-8 pt-8 md:items-center md:justify-between lg:flex-row"
+    >
       <div className="">
         <h1 className="text-2xl font-bold text-accent sm:text-4xl xl:text-5xl">
           Muhammad Alyan
