@@ -1,10 +1,7 @@
 import React from "react";
 const About = () => {
   return (
-    <section
-      id="about-me"
-      className="mx-auto h-[100vh] max-w-screen-2xl px-8 pt-8"
-    >
+    <section id="about-me" className="mx-auto max-w-screen-2xl px-8 pt-8">
       <h1 className="text-center text-4xl font-medium md:mb-8 md:text-7xl">
         Alyan, Who?
       </h1>
