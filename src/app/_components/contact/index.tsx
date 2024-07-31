@@ -21,14 +21,14 @@ const Contact = () => {
           <div className="mx-auto my-4 flex w-fit flex-col gap-4 md:flex-row lg:mx-0 lg:mt-8 lg:flex-col">
             <a
               href="mailto:alyan0332@gmail.com"
-              className="flex w-fit items-center gap-2 text-secondaryText"
+              className="flex w-fit items-center gap-2 text-secondaryText transition-colors duration-200 ease-in-out hover:text-accent"
             >
               <IoMail size={26} className="text-accent" />
               alyan0332@gmail.com
             </a>
             <a
               href="tel:+923333511135"
-              className="flex w-fit items-center gap-2 text-secondaryText"
+              className="flex w-fit items-center gap-2 text-secondaryText transition-colors duration-200 ease-in-out hover:text-accent"
             >
               <IoCall size={26} className="text-accent" />
               +92 333 3511135
