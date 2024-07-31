@@ -20,9 +20,12 @@ const HeroSection = () => {
           Crafting web solutions from concept to deployment, backed by a passion
           for innovation and staying at the forefront of technology.
         </p>
-        <button className="my-3 rounded-md border-[2px] border-accent px-2 py-[2px] font-semibold uppercase text-accent transition-colors duration-200 ease-in-out hover:bg-accent hover:text-primaryBackground">
+        <a
+          href="/#contact-me"
+          className="my-3 block w-fit rounded-md border border-accent px-2 py-[2px] font-medium uppercase text-accent transition-colors duration-200 ease-in-out hover:bg-accent hover:text-primaryBackground"
+        >
           Let's connect
-        </button>
+        </a>
       </div>
       <div className="fancyBorder mx-auto mt-12 flex h-[300px] w-[300px] items-center justify-center overflow-hidden bg-accent sm:h-[400px] sm:w-[400px] md:mx-0 md:mt-0 md:h-[500px] md:w-[500px]">
         <Image src={AlyanImage} alt="Alyan's Picture" className="mt-16" />
