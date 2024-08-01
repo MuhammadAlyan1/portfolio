@@ -5,7 +5,6 @@
 body {
   @apply mb-20 scroll-smooth bg-primaryBackground text-primaryText;
 }
-/* border-radius: 40% 60% 49% 51% / 65% 58% 42% 35%; */
 
 @keyframes example {
   0% {
