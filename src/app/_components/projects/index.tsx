@@ -11,6 +11,7 @@ const Projects = () => {
         {projects.map((project, index) => {
           return (
             <div
+              key={project.name}
               className={`flex flex-col-reverse gap-4 lg:gap-8 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} `}
             >
               <video
