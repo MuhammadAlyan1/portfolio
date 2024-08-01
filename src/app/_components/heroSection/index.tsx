@@ -28,7 +28,12 @@ const HeroSection = () => {
         </a>
       </div>
       <div className="fancyBorder mx-auto mt-12 flex h-[300px] w-[300px] items-center justify-center overflow-hidden bg-accent sm:h-[400px] sm:w-[400px] md:mx-0 md:mt-0 md:h-[500px] md:w-[500px]">
-        <Image src={AlyanImage} alt="Alyan's Picture" className="mt-16" />
+        <Image
+          src={AlyanImage}
+          priority={true}
+          alt="Alyan's Picture"
+          className="mt-16"
+        />
       </div>
     </div>
   );
