@@ -32,6 +32,7 @@ const ContactForm = () => {
 
     toast.success("Message Sent!");
   };
+  console.log("NAME: ", name);
   return (
     <form
       className="mx-auto w-full max-w-[650px] rounded-2xl bg-white/5 p-4 backdrop-blur-lg"
@@ -50,7 +51,7 @@ const ContactForm = () => {
           />
           <label
             htmlFor="name"
-            className={`absolute left-[16px] top-[26%] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[-16px] ${name ? "top-[-16px]" : ""}`}
+            className={`absolute left-[16px] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[-16px] ${name ? "top-[-16px]" : "top-[26%]"}`}
           >
             Name
           </label>
@@ -66,7 +67,7 @@ const ContactForm = () => {
           />
           <label
             htmlFor="email"
-            className={`absolute left-[16px] top-[26%] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[-16px] ${email ? "top-[-16px]" : ""}`}
+            className={`absolute left-[16px] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[-16px] ${email ? "top-[-16px]" : "top-[26%]"}`}
           >
             Email
           </label>
@@ -83,7 +84,7 @@ const ContactForm = () => {
         />
         <label
           htmlFor="message"
-          className={`absolute left-[16px] top-[30px] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[0px] ${message ? "top-[0px]" : ""}`}
+          className={`absolute left-[16px] select-none text-lg transition-all duration-200 ease-in-out group-focus-within:top-[0px] ${message ? "top-[0px]" : "top-[30px]"}`}
         >
           Message
         </label>
