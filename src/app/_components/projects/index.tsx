@@ -70,7 +70,7 @@ export default Projects;
 
 const projects = [
   {
-    video: "/colossal-innovations-homepage.mp4",
+    video: "/colossal-innovations.mp4",
     name: "Colossal Innovations",
     description: `Colossal Innovations is a web application designed for a software company in Islamabad. The site effectively showcases the company's leadership, core services, and values, providing visitors with a comprehensive overview of what the company offers. It features a range of sections, including client testimonials, a blog with industry insights and updates, a portfolio of projects, and career opportunities. This platform highlights the company's expertise and commitment to excellence while offering a user-friendly experience for potential clients and job seekers alike.`,
     url: "https://colossal-innovations.netlify.app/",
