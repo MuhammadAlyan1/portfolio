@@ -38,46 +38,18 @@ const About = () => {
             Get in Touch
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="https://www.linkedin.com/in/alyan-hanif-2542b11ba/"
-              target="_blank"
-              className="text-accent"
-            >
-              LinkedIn
-            </a>
-            <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
-            <a
-              href="https://github.com/MuhammadAlyan1"
-              target="_blank"
-              className="text-accent"
-            >
-              GitHub
-            </a>
-            <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
-            <a
-              href="https://x.com/AlyanDeveloper"
-              target="_blank"
-              className="text-accent"
-            >
-              Twitter
-            </a>
-            <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
-
-            <a
-              href="https://www.fiverr.com/alyan_hanif"
-              target="_blank"
-              className="text-accent"
-            >
-              Fiverr
-            </a>
-            <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
-            <a
-              href="https://www.upwork.com/freelancers/~01bf5a1ce43634bf45"
-              target="_blank"
-              className="text-accent"
-            >
-              Upwork
-            </a>
+            {socials.map((social, index) => {
+              return (
+                <>
+                  <a href={social.url} target="_blank" className="text-accent">
+                    {social.name}
+                  </a>
+                  {index !== socials.length - 1 && (
+                    <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
+                  )}
+                </>
+              );
+            })}
           </div>
         </div>
         <div className="my-8 gap-4 md:flex">
@@ -98,3 +70,26 @@ const About = () => {
 };
 
 export default About;
+
+const socials = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/alyan-hanif-2542b11ba/",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/MuhammadAlyan1",
+  },
+  {
+    name: "Twitter",
+    url: "https://x.com/AlyanDeveloper",
+  },
+  {
+    name: "Fiverr",
+    url: "https://www.fiverr.com/alyan_hanif",
+  },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com/freelancers/~01bf5a1ce43634bf45",
+  },
+];
