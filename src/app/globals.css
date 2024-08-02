@@ -42,7 +42,7 @@ html:focus-within {
   text-transform: uppercase;
   font-size: clamp(1rem, 2rem + 12vw, 300px);
   text-align: center;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1.5px #fff;
   -webkit-text-fill-color: #010b13;
   opacity: 0.25;
   user-select: none;
