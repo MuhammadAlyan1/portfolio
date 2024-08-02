@@ -41,7 +41,11 @@ const About = () => {
             {socials.map((social, index) => {
               return (
                 <>
-                  <a href={social.url} target="_blank" className="text-accent">
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    className="py-2 text-accent transition-all duration-200 ease-in-out hover:translate-y-[-2px]"
+                  >
                     {social.name}
                   </a>
                   {index !== socials.length - 1 && (
