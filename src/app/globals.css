@@ -47,3 +47,99 @@ html:focus-within {
   opacity: 0.25;
   user-select: none;
 }
+
+@keyframes movingElement {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(25%, 25%);
+  }
+  50% {
+    transform: translate(0%, 50%);
+  }
+  75% {
+    transform: translate(-25%, 25%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.moving-items {
+  animation-name: movingElement;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes movingElement2 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(15%, 15%);
+  }
+  50% {
+    transform: translate(60%, -50%);
+  }
+  75% {
+    transform: translate(45%, 15%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+.moving-items2 {
+  animation-name: movingElement2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes movingElement3 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(-15%, 15%);
+  }
+  50% {
+    transform: translate(0%, -50%);
+  }
+  75% {
+    transform: translate(5%, 15%);
+  }
+  100% {
+    transform: translate(10%, 0%);
+  }
+}
+.moving-items3 {
+  animation-name: movingElement3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes movingElement4 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(-15%, -12%);
+  }
+  50% {
+    transform: translate(0%, -50%);
+  }
+  75% {
+    transform: translate(52%, -15%);
+  }
+  100% {
+    transform: translate(10%, 0%);
+  }
+}
+.moving-items4 {
+  animation-name: movingElement4;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
