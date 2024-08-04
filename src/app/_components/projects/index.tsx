@@ -21,6 +21,7 @@ const Projects = () => {
                 muted
                 loop
                 className="aspect-video overflow-hidden rounded-md lg:max-w-[750px]"
+                poster={project.thumbnail}
               >
                 <source src={project.video} type="video/mp4" />
               </video>
@@ -72,6 +73,7 @@ export default Projects;
 const projects = [
   {
     video: "/colossal-innovations.mp4",
+    thumbnail: "/colossal-thumbnail.jpg",
     name: "Colossal Innovations",
     description: `Colossal Innovations is a web application designed for a software company in Islamabad. The site effectively showcases the company's leadership, core services, and values, providing visitors with a comprehensive overview of what the company offers. It features a range of sections, including client testimonials, a blog with industry insights and updates, a portfolio of projects, and career opportunities. This platform highlights the company's expertise and commitment to excellence while offering a user-friendly experience for potential clients and job seekers alike.`,
     url: "https://colossal-innovations.netlify.app/",
@@ -80,6 +82,7 @@ const projects = [
   },
   {
     video: "/colossal-dashboard.mp4",
+    thumbnail: "/colossal-dashboard-thumbnail.jpg",
     name: "Colossal Innovations Dashboard",
     description: `Colossal Innovations Dashboard is a powerful management tool designed to support the web application for a software company. It provides a centralized interface for managing users, blog content, portfolio projects, career applications, and email communications. The dashboard streamlines administrative tasks and facilitates efficient oversight of various aspects of the web application, ensuring that all elements from user interactions to content updates are handled seamlessly and effectively. This tool enhances operational efficiency and helps maintain the site's dynamic features and up-to-date information.`,
     url: "https://colossal-innovations-dashboard.netlify.app/",
@@ -89,6 +92,7 @@ const projects = [
   {
     video: "/deal-it.mp4",
     name: "Deal It",
+    thumbnail: "/deal-it-thumbnail.jpg",
     description: `Deal-It redefines negotiation by connecting users with verified expert negotiators to facilitate and simplify price discussions. The platform features detailed negotiator profiles, showcases top experts, and categorizes negotiations for easy navigation. It includes a blog with industry insights, a referral program, and chat functionality for direct interaction. With options for subscriptions, feedback, and streamlined order management, Deal-It offers a comprehensive and efficient solution for all negotiation needs, ensuring a smooth and effective negotiation experience.`,
     url: "https://deal-it.vercel.app/",
     technologies: ["Next", "JavaScript", "Firebase", "MaterialUI", "Stripe"],
@@ -97,6 +101,7 @@ const projects = [
   {
     video: "/playsense.mp4",
     name: "PlaySense",
+    thumbnail: "/playsense-thumbnail.jpg",
     description: `PlaySense is a dynamic platform designed for eSport enthusiasts, offering a range of features to enhance the gaming experience. Users can create and customize profiles, connect with friends, and engage in real-time chat. The platform includes functionality for providing feedback, browsing a comprehensive game database, and buying or selling services with other users. PlaySense allows users to enter match scores and gain valuable gameplay insights, while also offering tools for reporting content, managing users, and handling orders.`,
     url: "https://playsense.netlify.app/",
     technologies: [
