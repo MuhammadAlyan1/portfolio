@@ -24,11 +24,11 @@ const Contact = () => {
               alyan0332@gmail.com
             </a>
             <a
-              href="tel:+923333511135"
+              href="tel:+923333511136"
               className="flex w-fit items-center gap-2 text-secondaryText transition-colors duration-200 ease-in-out hover:text-accent"
             >
               <IoCall size={26} className="text-accent" />
-              +92 333 3511135
+              +92 333 3511136
             </a>
           </div>
         </div>
