@@ -61,7 +61,7 @@ const About = () => {
             Learn More
           </p>
           <a
-            href="./Alyan's resume.pdf"
+            href="./alyan-resume.pdf"
             download={`Alyan's Resume`}
             className="flex w-fit items-center justify-center rounded-md border border-accent bg-primaryBackground px-2 py-1 text-sm font-semibold uppercase text-accent transition-all duration-200 ease-in-out hover:bg-accent hover:text-primaryBackground"
           >
