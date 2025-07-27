@@ -15,14 +15,14 @@ const About = () => {
             SHORT BIO
           </p>
           <p className="max-w-[90ch] text-justify text-secondaryText">
-            I'm Muhammad Alyan, a Full stack Developer from Islamabad, Pakistan,
-            with a Bachelor's degree in Software Engineering. With over a year
-            of professional experience in the MERN stack, I have honed my skills
-            in creating clean, maintainable code and enhancing user experiences
-            through efficient and optimized web applications. My journey in web
-            development spans over three years, including both freelance and
-            full-time roles, where I have developed a strong foundation in
-            software engineering principles and practices.
+            I'm Muhammad Alyan, a Full stack Developer based in Islamabad,
+            Pakistan, with a Bachelor's degree in Software Engineering. With
+            over two years of professional experience in the MERN stack, I have
+            honed my skills in creating clean, maintainable code and enhancing
+            user experiences through efficient and optimized web applications.
+            My journey in web development spans over four years, including both
+            freelance and full-time roles, where I have developed a strong
+            foundation in software engineering principles and practices.
           </p>
         </div>
         <div className="my-8 gap-4 md:flex">
@@ -61,7 +61,7 @@ const About = () => {
             Learn More
           </p>
           <a
-            href="./resume.pdf"
+            href="./Alyan's resume.pdf"
             download={`Alyan's Resume`}
             className="flex w-fit items-center justify-center rounded-md border border-accent bg-primaryBackground px-2 py-1 text-sm font-semibold uppercase text-accent transition-all duration-200 ease-in-out hover:bg-accent hover:text-primaryBackground"
           >
