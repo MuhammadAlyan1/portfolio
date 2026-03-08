@@ -1,6 +1,12 @@
 import React from "react";
 import ProjectLink from "./ProjectLink";
 
+export const metadata = {
+  title: "Projects",
+  description:
+    "Projects built by Alyan Hanif including Next.js, React, React Native, TypeScript and full stack applications.",
+};
+
 const Projects = () => {
   return (
     <section id="projects" className="mx-auto mt-20 max-w-screen-2xl px-8 pt-8">

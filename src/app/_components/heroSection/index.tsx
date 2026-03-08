@@ -16,7 +16,7 @@ const HeroSection = () => {
     >
       <section className="relative">
         <h1 className="text-2xl font-bold text-accent sm:text-4xl xl:text-5xl">
-          Muhammad Alyan
+          Alyan Hanif
         </h1>
         <p className="my-2 text-3xl font-bold text-primaryText sm:text-5xl xl:text-6xl">
           Full Stack Developer

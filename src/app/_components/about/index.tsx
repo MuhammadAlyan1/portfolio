@@ -15,14 +15,13 @@ const About = () => {
             SHORT BIO
           </p>
           <p className="max-w-[90ch] text-justify text-secondaryText">
-            I'm Muhammad Alyan, a Full stack Developer based in Islamabad,
-            Pakistan, with a Bachelor's degree in Software Engineering. With
-            over two years of professional experience in the MERN stack, I have
-            honed my skills in creating clean, maintainable code and enhancing
-            user experiences through efficient and optimized web applications.
-            My journey in web development spans over four years, including both
-            freelance and full-time roles, where I have developed a strong
-            foundation in software engineering principles and practices.
+            I'm Alyan Hanif, a Full-Stack Engineer with 3 years of production
+            experience building scalable web applications using Next.js, React,
+            TypeScript, and Node.js. I focus on performance optimization, AI
+            automation workflows, and shipping features that create measurable
+            business impact. I enjoy solving real-world problems through clean,
+            maintainable code and building products that are fast, reliable, and
+            easy to use.
           </p>
         </div>
         <div className="my-8 gap-4 md:flex">
@@ -78,7 +77,7 @@ export default About;
 const socials = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/alyan-hanif-2542b11ba/",
+    url: "https://www.linkedin.com/in/alyan-hanif",
   },
   {
     name: "GitHub",
