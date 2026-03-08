@@ -9,30 +9,35 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const form = useRef<HTMLFormElement>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.current) return;
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      toast.error("Please enter all fields.");
-      return;
+    try {
+      e.preventDefault();
+      if (!form.current) return;
+      if (!name.trim() || !email.trim() || !message.trim()) {
+        toast.error("Please enter all fields.");
+        return;
+      }
+
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID!,
+        form?.current,
+        process.env.NEXT_PUBLIC_EMAIL_JS_OPTIONS_ID!,
+      );
+
+      form?.current?.reset();
+
+      toast.success("Message Sent!");
+    } catch (error) {
+      toast.error("Failed to send message.");
     }
-
-    setName("");
-    setEmail("");
-    setMessage("");
-
-    emailjs.sendForm(
-      "service_u34fd5j",
-      "template_as6rgmv",
-      form?.current,
-      "nhM5ZYdNE5pxT7fCY",
-    );
-
-    form?.current?.reset();
-
-    toast.success("Message Sent!");
   };
-  console.log("NAME: ", name);
+
   return (
     <form
       className="mx-auto w-full max-w-[650px] rounded-2xl bg-white/5 p-4 backdrop-blur-lg"

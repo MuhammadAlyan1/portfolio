@@ -13,6 +13,7 @@ import ExpressIcon from "../../../assets/icons/technologies/express.svg";
 import GitIcon from "../../../assets/icons/technologies/git.svg";
 import TailwindIcon from "../../../assets/icons/technologies/tailwind.svg";
 import ReduxIcon from "../../../assets/icons/technologies/redux.svg";
+import N8NIcon from "../../../assets/icons/technologies/n8n.svg";
 
 export const toolsAndTechnologies = [
   {
@@ -44,6 +45,11 @@ export const toolsAndTechnologies = [
     icon: HtmlIcon,
     name: "HTML",
     color: "#e34c26",
+  },
+  {
+    icon: N8NIcon,
+    name: "N8N",
+    color: "#EA4B71",
   },
   {
     icon: CssIcon,
