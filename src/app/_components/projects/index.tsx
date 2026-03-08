@@ -1,5 +1,5 @@
 import React from "react";
-import { FiExternalLink } from "react-icons/fi";
+import ProjectLink from "./ProjectLink";
 
 const Projects = () => {
   return (
@@ -42,22 +42,8 @@ const Projects = () => {
                   })}
                 </div>
                 <div className="my-4 flex items-center gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className={`group flex w-fit items-center gap-2 rounded-md border border-accent bg-primaryBackground px-3 py-1 uppercase text-accent ${project.github === "" ? "pointer-events-none" : ""}`}
-                  >
-                    Source Code
-                    <FiExternalLink className="relative transition-all duration-200 ease-in-out group-hover:translate-x-[2px] group-hover:translate-y-[-2px]" />
-                  </a>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    className={`group flex w-fit items-center gap-2 rounded-md border border-accent bg-primaryBackground px-3 py-1 uppercase text-accent`}
-                  >
-                    Live Site
-                    <FiExternalLink className="relative transition-all duration-200 ease-in-out group-hover:translate-x-[2px] group-hover:translate-y-[-2px]" />
-                  </a>
+                  <ProjectLink href={project.github} label="Source Code" />
+                  <ProjectLink href={project.url} label="Live Site" />
                 </div>
               </div>
             </div>
@@ -72,30 +58,22 @@ export default Projects;
 
 const projects = [
   {
-    video: "/colossal-innovations.mp4",
-    thumbnail: "/colossal-thumbnail.jpg",
-    name: "Colossal Innovations",
-    description: `Colossal Innovations is a web application designed for a software company in Islamabad. The site effectively showcases the company's leadership, core services, and values, providing visitors with a comprehensive overview of what the company offers. It features a range of sections, including client testimonials, a blog with industry insights and updates, a portfolio of projects, and career opportunities. This platform highlights the company's expertise and commitment to excellence while offering a user-friendly experience for potential clients and job seekers alike.`,
-    url: "https://colossal-innovations.netlify.app/",
-    technologies: ["React", "JavaScript", "CSS", "Node", "Express", "MongoDB"],
-    github: "https://github.com/MuhammadAlyan1/colossal-innovations-website",
-  },
-  {
-    video: "/colossal-dashboard.mp4",
-    thumbnail: "/colossal-dashboard-thumbnail.jpg",
-    name: "Colossal Innovations Dashboard",
-    description: `Colossal Innovations Dashboard is a powerful management tool designed to support the web application for a software company. It provides a centralized interface for managing users, blog content, portfolio projects, career applications, and email communications. The dashboard streamlines administrative tasks and facilitates efficient oversight of various aspects of the web application, ensuring that all elements from user interactions to content updates are handled seamlessly and effectively. This tool enhances operational efficiency and helps maintain the site's dynamic features and up-to-date information.`,
-    url: "https://colossal-innovations-dashboard.netlify.app/",
-    technologies: ["React", "TypeScript", "SCSS", "Node", "Express", "MongoDB"],
-    github: "https://github.com/MuhammadAlyan1/colossal-innovations-dashboard",
-  },
-  {
-    video: "/deal-it.mp4",
-    name: "Deal It",
-    thumbnail: "/deal-it-thumbnail.jpg",
-    description: `Deal-It redefines negotiation by connecting users with verified expert negotiators to facilitate and simplify price discussions. The platform features detailed negotiator profiles, showcases top experts, and categorizes negotiations for easy navigation. It includes a blog with industry insights, a referral program, and chat functionality for direct interaction. With options for subscriptions, feedback, and streamlined order management, Deal-It offers a comprehensive and efficient solution for all negotiation needs, ensuring a smooth and effective negotiation experience.`,
-    url: "https://deal-it.vercel.app/",
-    technologies: ["Next", "JavaScript", "Firebase", "MaterialUI", "Stripe"],
+    video: "/lilia-dashboard.mp4",
+    name: "Lilia",
+    thumbnail: "/lilia-dashboard-thumbnail.jpg",
+    description:
+      "Lilia is a cross-platform learning app that helps students explore and identify plants through interactive quizzes, leaderboards, and gamified lessons. I led the full development of the web and mobile apps, designed the complete user experience, and implemented free and premium access with PayPal payment integration. The platform supports English and German, tracks progress and performance, and delivers a fast, engaging experience that motivates learners and encourages long-term learning.",
+    url: "https://lilia-frontend.vercel.app/",
+    technologies: [
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Material UI",
+      "Node",
+      "Express",
+      "MongoDB",
+      "PayPal",
+    ],
     github: "",
   },
   {
@@ -114,5 +92,23 @@ const projects = [
       "PayPal",
     ],
     github: "https://github.com/MuhammadAlyan1/playsense",
+  },
+  {
+    video: "/deal-it.mp4",
+    name: "Deal It",
+    thumbnail: "/deal-it-thumbnail.jpg",
+    description: `Deal-It redefines negotiation by connecting users with verified expert negotiators to facilitate and simplify price discussions. The platform features detailed negotiator profiles, showcases top experts, and categorizes negotiations for easy navigation. It includes a blog with industry insights, a referral program, and chat functionality for direct interaction. With options for subscriptions, feedback, and streamlined order management, Deal-It offers a comprehensive and efficient solution for all negotiation needs, ensuring a smooth and effective negotiation experience.`,
+    url: "https://deal-it.vercel.app/",
+    technologies: ["Next", "JavaScript", "Firebase", "MaterialUI", "Stripe"],
+    github: "",
+  },
+  {
+    video: "/colossal-innovations.mp4",
+    thumbnail: "/colossal-thumbnail.jpg",
+    name: "Colossal Innovations",
+    description: `Colossal Innovations is a web application designed for a software company in Islamabad. The site effectively showcases the company's leadership, core services, and values, providing visitors with a comprehensive overview of what the company offers. It features a range of sections, including client testimonials, a blog with industry insights and updates, a portfolio of projects, and career opportunities. This platform highlights the company's expertise and commitment to excellence while offering a user-friendly experience for potential clients and job seekers alike.`,
+    url: "https://colossal-innovations.netlify.app/",
+    technologies: ["React", "JavaScript", "CSS", "Node", "Express", "MongoDB"],
+    github: "https://github.com/MuhammadAlyan1/colossal-innovations-website",
   },
 ];
