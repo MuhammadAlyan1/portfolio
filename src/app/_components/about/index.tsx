@@ -15,7 +15,7 @@ const About = () => {
             SHORT BIO
           </p>
           <p className="max-w-[90ch] text-justify text-secondaryText">
-            I'm Alyan Hanif, a Full-Stack Engineer with 3 years of production
+            I'm Alyan Hanif, a Full-Stack Engineer with 4 years of production
             experience building scalable web applications using Next.js, React,
             TypeScript, and Node.js. I focus on performance optimization, AI
             automation workflows, and shipping features that create measurable
