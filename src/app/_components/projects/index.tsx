@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectLink from "./ProjectLink";
+import ProjectMedia from "./ProjectMedia";
 
 export const metadata = {
   title: "Projects",
@@ -20,17 +21,11 @@ const Projects = () => {
               key={project.name}
               className={`flex flex-col-reverse gap-4 lg:gap-8 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} `}
             >
-              <video
-                width="100%"
-                height="fit-content"
-                autoPlay
-                muted
-                loop
-                className="aspect-video overflow-hidden rounded-md lg:max-w-[750px]"
-                poster={project.thumbnail}
-              >
-                <source src={project.video} type="video/mp4" />
-              </video>
+              <ProjectMedia
+                thumbnail={project.thumbnail}
+                video={project.video}
+                name={project.name}
+              />
               <div className="w-fit">
                 <p className="my-4 text-3xl font-medium text-accent sm:text-4xl md:mt-0 md:text-3xl">
                   {project.name}
@@ -66,9 +61,9 @@ const projects = [
   {
     video: "/lilia-dashboard.mp4",
     name: "Lilia",
-    thumbnail: "/lilia-dashboard-thumbnail.jpg",
+    thumbnail: "/lilia-thumbnail.jpg",
     description:
-      "Lilia is a cross-platform learning app that helps students explore and identify plants through interactive quizzes, leaderboards, and gamified lessons. I led the full development of the web and mobile apps, designed the complete user experience, and implemented free and premium access with PayPal payment integration. The platform supports English and German, tracks progress and performance, and delivers a fast, engaging experience that motivates learners and encourages long-term learning.",
+      "Architected and built a gamified cross-platform learning platform utilized by 4 organizations and 300+ active students. Improved Core Web Vitals scores from 40 to 90 to maximize user experience, integrated secure PayPal payment tiers, and established automated CI/CD pipelines via GitHub Actions on AWS EC2 & Hetzner.",
     url: "https://lilia-frontend.vercel.app/",
     technologies: [
       "Next.js",
@@ -85,8 +80,9 @@ const projects = [
   {
     video: "/playsense.mp4",
     name: "PlaySense",
-    thumbnail: "/playsense-thumbnail.jpg",
-    description: `PlaySense is a dynamic platform designed for eSport enthusiasts, offering a range of features to enhance the gaming experience. Users can create and customize profiles, connect with friends, and engage in real-time chat. The platform includes functionality for providing feedback, browsing a comprehensive game database, and buying or selling services with other users. PlaySense allows users to enter match scores and gain valuable gameplay insights, while also offering tools for reporting content, managing users, and handling orders.`,
+    thumbnail: "/playsense-thumbnail.png",
+    description:
+      "A dynamic full-stack eSports platform supporting customized user profiles, real-time chat, match scoring, and gameplay insights. Developed real-time transaction processing for user-to-user services, comprehensive game database management, and order handling.",
     url: "https://playsense.netlify.app/",
     technologies: [
       "React",
@@ -103,7 +99,8 @@ const projects = [
     video: "/deal-it.mp4",
     name: "Deal It",
     thumbnail: "/deal-it-thumbnail.jpg",
-    description: `Deal-It redefines negotiation by connecting users with verified expert negotiators to facilitate and simplify price discussions. The platform features detailed negotiator profiles, showcases top experts, and categorizes negotiations for easy navigation. It includes a blog with industry insights, a referral program, and chat functionality for direct interaction. With options for subscriptions, feedback, and streamlined order management, Deal-It offers a comprehensive and efficient solution for all negotiation needs, ensuring a smooth and effective negotiation experience.`,
+    description:
+      "Designed and built a marketplace platform connecting users with verified negotiation experts. Implemented role-based access controls, robust multi-party authentication, dynamic content generation via an internal admin dashboard, and real-time interaction channels.",
     url: "https://deal-it.vercel.app/",
     technologies: ["Next", "JavaScript", "Firebase", "MaterialUI", "Stripe"],
     github: "",
@@ -112,7 +109,8 @@ const projects = [
     video: "/colossal-innovations.mp4",
     thumbnail: "/colossal-thumbnail.jpg",
     name: "Colossal Innovations",
-    description: `Colossal Innovations is a web application designed for a software company in Islamabad. The site effectively showcases the company's leadership, core services, and values, providing visitors with a comprehensive overview of what the company offers. It features a range of sections, including client testimonials, a blog with industry insights and updates, a portfolio of projects, and career opportunities. This platform highlights the company's expertise and commitment to excellence while offering a user-friendly experience for potential clients and job seekers alike.`,
+    description:
+      "Built a full-stack corporate website and a secure internal admin dashboard with role-based access control. Enabled HR staff and content editors to manage blog posts and job applications directly through the UI. This streamlined content workflows and removed all manual database management overhead for non-technical team members.",
     url: "https://colossal-innovations.netlify.app/",
     technologies: ["React", "JavaScript", "CSS", "Node", "Express", "MongoDB"],
     github: "https://github.com/MuhammadAlyan1/colossal-innovations-website",

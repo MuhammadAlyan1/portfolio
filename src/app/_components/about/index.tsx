@@ -7,7 +7,7 @@ const About = () => {
       </h1>
       <div className="mx-auto my-4 h-1 w-[100px] rounded-md bg-accent"></div>
       <p className="mx-auto max-w-[30ch] text-center text-xl md:mb-24 md:max-w-[90ch] md:text-3xl">
-        A full stack developer based in Islamabad, Pakistan.
+        AI Full Stack Engineer helping startups automate and ship faster.
       </p>
       <div className="mx-auto w-fit">
         <div className="my-8 gap-4 md:flex">
@@ -15,13 +15,12 @@ const About = () => {
             SHORT BIO
           </p>
           <p className="max-w-[90ch] text-justify text-secondaryText">
-            I'm Alyan Hanif, a Full-Stack Engineer with 4 years of production
-            experience building scalable web applications using Next.js, React,
-            TypeScript, and Node.js. I focus on performance optimization, AI
-            automation workflows, and shipping features that create measurable
-            business impact. I enjoy solving real-world problems through clean,
-            maintainable code and building products that are fast, reliable, and
-            easy to use.
+            I'm Alyan Hanif, an AI Full Stack Engineer with 4 years of
+            experience building production systems for startups. I design and
+            build AI automation pipelines, RAG systems, and scalable web
+            applications using Next.js, Node.js, and Python. I focus on turning
+            manual, time-consuming processes into fast, reliable, automated
+            systems that improve how startups operate.
           </p>
         </div>
         <div className="my-8 gap-4 md:flex">

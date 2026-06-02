@@ -143,3 +143,67 @@ html:focus-within {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+/* Contact card: rotating gold gradient border that ties into the
+   site's animated/morphing visual language. */
+@property --contact-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes contactBorderSpin {
+  to {
+    --contact-angle: 360deg;
+  }
+}
+
+.contact-card {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--contact-angle),
+    rgba(252, 225, 121, 0) 0deg,
+    rgba(252, 225, 121, 0) 70deg,
+    rgba(252, 225, 121, 0.75) 130deg,
+    rgba(252, 225, 121, 0) 190deg,
+    rgba(252, 225, 121, 0) 300deg,
+    rgba(252, 225, 121, 0.4) 340deg,
+    rgba(252, 225, 121, 0) 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: contactBorderSpin 8s linear infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card::before {
+    animation: none;
+  }
+}
+
+.contact-card input:-webkit-autofill,
+.contact-card input:-webkit-autofill:hover,
+.contact-card input:-webkit-autofill:focus,
+.contact-card input:-webkit-autofill:active,
+.contact-card textarea:-webkit-autofill,
+.contact-card textarea:-webkit-autofill:hover,
+.contact-card textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fce179;
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}

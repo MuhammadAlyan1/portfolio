@@ -1,7 +1,3 @@
-import HtmlIcon from "../../../assets/icons/technologies/html.svg";
-import CssIcon from "../../../assets/icons/technologies/css.svg";
-import SassIcon from "../../../assets/icons/technologies/sass.svg";
-import MantineIcon from "../../../assets/icons/technologies/mantine.svg";
 import MaterialIcon from "../../../assets/icons/technologies/materialUI.svg";
 import JavaScriptIcon from "../../../assets/icons/technologies/javascript.svg";
 import TypeScriptIcon from "../../../assets/icons/technologies/typescript.svg";
@@ -10,12 +6,27 @@ import NextIcon from "../../../assets/icons/technologies/nextjs.svg";
 import NodeIcon from "../../../assets/icons/technologies/node.svg";
 import MongoDBIcon from "../../../assets/icons/technologies/mongodb.svg";
 import ExpressIcon from "../../../assets/icons/technologies/express.svg";
-import GitIcon from "../../../assets/icons/technologies/git.svg";
 import TailwindIcon from "../../../assets/icons/technologies/tailwind.svg";
-import ReduxIcon from "../../../assets/icons/technologies/redux.svg";
 import N8NIcon from "../../../assets/icons/technologies/n8n.svg";
+import PythonIcon from "../../../assets/icons/technologies/python.svg";
+import PostgresIcon from "../../../assets/icons/technologies/postgres.svg";
 
 export const toolsAndTechnologies = [
+  {
+    icon: NodeIcon,
+    name: "Node",
+    color: "#539E43",
+  },
+  {
+    icon: PythonIcon,
+    name: "Python",
+    color: "#FFDF76",
+  },
+  {
+    icon: N8NIcon,
+    name: "N8N",
+    color: "#EA4B71",
+  },
   {
     icon: ReactIcon,
     name: "React",
@@ -23,13 +34,13 @@ export const toolsAndTechnologies = [
   },
   {
     icon: NextIcon,
-    name: "Next",
+    name: "Next.js",
     color: "#FFFFFF",
   },
   {
-    icon: NodeIcon,
-    name: "Node",
-    color: "#539E43",
+    icon: PostgresIcon,
+    name: "PostgreSQL",
+    color: "#336791",
   },
   {
     icon: MongoDBIcon,
@@ -40,31 +51,6 @@ export const toolsAndTechnologies = [
     icon: ExpressIcon,
     name: "Express",
     color: "#FFFFFF",
-  },
-  {
-    icon: HtmlIcon,
-    name: "HTML",
-    color: "#e34c26",
-  },
-  {
-    icon: N8NIcon,
-    name: "N8N",
-    color: "#EA4B71",
-  },
-  {
-    icon: CssIcon,
-    name: "CSS",
-    color: "#33A9DC",
-  },
-  {
-    icon: SassIcon,
-    name: "SCSS",
-    color: "#CD6799",
-  },
-  {
-    icon: MantineIcon,
-    name: "Mantine",
-    color: "#339AF0",
   },
   {
     icon: MaterialIcon,
@@ -86,15 +72,5 @@ export const toolsAndTechnologies = [
     icon: JavaScriptIcon,
     name: "JavaScript",
     color: "#F7DF1E",
-  },
-  {
-    icon: ReduxIcon,
-    name: "Redux",
-    color: "#593D88",
-  },
-  {
-    icon: GitIcon,
-    name: "Git",
-    color: "#F34F29",
   },
 ];
