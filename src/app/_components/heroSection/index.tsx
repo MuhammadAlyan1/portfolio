@@ -35,7 +35,7 @@ const HeroSection = () => {
           <Image
             src={AlyanImage}
             priority={true}
-            alt="Alyan's Picture"
+            alt="Alyan Hanif — AI Full Stack Engineer"
             className="mt-16"
           />
         </div>

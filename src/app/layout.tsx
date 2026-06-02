@@ -5,17 +5,18 @@ import Navigation from "./_components/navigation";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alyan.vercel.app/"),
+  metadataBase: new URL("https://alyan.dev/"),
   title: {
-    default: "Alyan Hanif | Full Stack Developer",
+    default: "Alyan Hanif | AI Full Stack Engineer",
     template: "%s | Alyan Hanif",
   },
   description:
-    "Alyan Hanif is a Full Stack Developer specializing in Next.js, React, TypeScript, and Node.js. View projects, experience, and portfolio.",
+    "Alyan Hanif is an AI Full Stack Engineer specializing in Next.js, React, TypeScript, and Node.js. View projects, experience, and portfolio.",
   keywords: [
     "Alyan Hanif",
     "Muhammad Alyan",
-    "Full Stack Developer",
+    "AI Full Stack Engineer",
+    "AI Fullstack Engineer",
     "Next.js Developer",
     "React Developer",
     "TypeScript Developer",
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
   creator: "Alyan Hanif",
   publisher: "Alyan Hanif",
   openGraph: {
-    title: "Alyan Hanif | Full Stack Developer",
+    title: "Alyan Hanif | AI Full Stack Engineer",
     description:
-      "Full Stack Developer specializing in Next.js, React, TypeScript and Node.js.",
-    url: "https://alyan.vercel.app/",
+      "AI Full Stack Engineer specializing in Next.js, React, TypeScript and Node.js.",
+    url: "https://alyan.dev/",
     siteName: "Alyan Hanif Portfolio",
     images: [
       {
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alyan Hanif | Full Stack Developer",
+    title: "Alyan Hanif | AI Full Stack Engineer",
     description:
-      "Full Stack Developer specializing in Next.js, React, TypeScript and Node.js.",
+      "AI Full Stack Engineer specializing in Next.js, React, TypeScript and Node.js.",
     images: ["/alyan.png"],
   },
   robots: {
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://alyan.vercel.app/",
+    canonical: "https://alyan.dev/",
   },
 };
 
@@ -66,8 +67,8 @@ const personJsonLd = {
   "@type": "Person",
   name: "Alyan Hanif",
   alternateName: ["Muhammad Alyan", "Alyan"],
-  url: "https://alyan.vercel.app/",
-  jobTitle: "Full Stack Developer",
+  url: "https://alyan.dev/",
+  jobTitle: "AI Full Stack Engineer",
   sameAs: [
     "https://www.linkedin.com/in/alyan-hanif-2542b11ba/",
     "https://www.linkedin.com/in/alyan-hanif/",
@@ -75,14 +76,28 @@ const personJsonLd = {
     "https://x.com/AlyanDeveloper",
     "https://www.fiverr.com/alyan_hanif",
     "https://www.upwork.com/freelancers/~01bf5a1ce43634bf45",
+    "https://alyan.vercel.app/",
   ],
   knowsAbout: [
     "Next.js",
     "React",
     "TypeScript",
     "Node.js",
+    "AI Full Stack Engineering",
     "Full Stack Development",
   ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alyan Hanif",
+  alternateName: "Alyan Hanif Portfolio",
+  url: "https://alyan.dev/",
+  author: {
+    "@type": "Person",
+    name: "Alyan Hanif",
+  },
 };
 
 export default function RootLayout({
@@ -110,6 +125,12 @@ export default function RootLayout({
           type="application/ld+json"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </body>
     </html>

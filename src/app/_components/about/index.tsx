@@ -38,7 +38,7 @@ const About = () => {
           <div className="flex flex-wrap items-center gap-3">
             {socials.map((social, index) => {
               return (
-                <>
+                <React.Fragment key={social.name}>
                   <a
                     href={social.url}
                     target="_blank"
@@ -49,7 +49,7 @@ const About = () => {
                   {index !== socials.length - 1 && (
                     <div className="h-[16px] w-[2px] rounded-md bg-secondaryText"></div>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
           </div>

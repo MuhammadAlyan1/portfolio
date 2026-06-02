@@ -36,7 +36,10 @@ const Projects = () => {
                 <div className="my-4 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => {
                     return (
-                      <p className="rounded-md bg-secondaryBackground px-2 py-1 text-sm">
+                      <p
+                        key={technology}
+                        className="rounded-md bg-secondaryBackground px-2 py-1 text-sm"
+                      >
                         {technology}
                       </p>
                     );
