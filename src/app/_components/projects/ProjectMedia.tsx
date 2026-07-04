@@ -7,7 +7,8 @@ const ProjectMedia: React.FC<{
   thumbnail: string;
   video: string;
   name: string;
-}> = ({ thumbnail, video, name }) => {
+  wide?: boolean;
+}> = ({ thumbnail, video, name, wide = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const ProjectMedia: React.FC<{
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label={`Play ${name} demo video`}
-        className="group relative block w-full cursor-pointer overflow-hidden rounded-md lg:max-w-[750px]"
+        className={`group relative block w-full cursor-pointer overflow-hidden rounded-md ${wide ? "" : "lg:max-w-[750px]"}`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

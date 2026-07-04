@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 import ProjectLink from "./ProjectLink";
 import ProjectMedia from "./ProjectMedia";
 import { projects } from "@/data/projects";
@@ -40,9 +42,16 @@ const Projects = () => {
                     );
                   })}
                 </div>
-                <div className="my-4 flex items-center gap-4">
+                <div className="my-4 flex flex-wrap items-center gap-4">
                   <ProjectLink href={project.github} label="Source Code" />
                   <ProjectLink href={project.url} label="Live Site" />
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="group flex w-fit items-center gap-2 rounded-md bg-accent px-3 py-1 uppercase text-primaryBackground"
+                  >
+                    Case Study
+                    <FiArrowRight className="transition-transform duration-200 ease-in-out group-hover:translate-x-[2px]" />
+                  </Link>
                 </div>
               </div>
             </div>

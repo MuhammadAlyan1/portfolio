@@ -98,7 +98,7 @@ export const profile = {
   ],
 
   resumePath: "/alyan-resume.pdf",
-  portraitPath: "/alyan.png",
+  portraitPath: "/alyan.jpg",
 
   colors: {
     background: "#010B13",
