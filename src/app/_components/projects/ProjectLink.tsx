@@ -16,7 +16,12 @@ const ProjectLink: React.FC<{
 }> = ({ label, href, missingLinkMessage = "This repository is private" }) => {
   if (href) {
     return (
-      <a href={href} target="_blank" className={styles.container}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.container}
+      >
         {label}
         <FiExternalLink className={styles.icon} />
       </a>
@@ -24,13 +29,14 @@ const ProjectLink: React.FC<{
   }
 
   return (
-    <p
+    <button
+      type="button"
       className={styles.container}
       onClick={() => toast.error(missingLinkMessage)}
     >
       {label}
       <FiExternalLink className={styles.icon} />
-    </p>
+    </button>
   );
 };
 
