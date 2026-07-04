@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { profile } from "@/data/profile";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://alyan.dev/sitemap.xml",
-    host: "https://alyan.dev",
+    sitemap: `${profile.siteUrl}/sitemap.xml`,
+    host: profile.siteUrl,
   };
 }

@@ -39,13 +39,18 @@ html:focus-within {
 }
 
 .stroke-text {
-  text-transform: uppercase;
-  font-size: clamp(1rem, 2rem + 12vw, 300px);
-  text-align: center;
-  -webkit-text-stroke: 1.5px #fff;
-  -webkit-text-fill-color: #010b13;
-  opacity: 0.25;
+  opacity: 0.12;
   user-select: none;
+  pointer-events: none;
+}
+
+.stroke-text text {
+  font-size: 165px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
 @keyframes movingElement {

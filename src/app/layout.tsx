@@ -1,103 +1,101 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+import type { Metadata, Viewport } from "next";
 import { Toaster } from "react-hot-toast";
 import Navigation from "./_components/navigation";
+import JsonLd from "@/lib/jsonLd";
+import { profile } from "@/data/profile";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alyan.dev/"),
+  metadataBase: new URL(profile.siteUrl),
   title: {
-    default: "Alyan Hanif | AI Full Stack Engineer",
-    template: "%s | Alyan Hanif",
+    default: `${profile.name} | ${profile.title}`,
+    template: `%s | ${profile.name}`,
   },
-  description:
-    "Alyan Hanif is an AI Full Stack Engineer specializing in Next.js, React, TypeScript, and Node.js. View projects, experience, and portfolio.",
-  keywords: [
-    "Alyan Hanif",
-    "Muhammad Alyan",
-    "AI Full Stack Engineer",
-    "AI Fullstack Engineer",
-    "Next.js Developer",
-    "React Developer",
-    "TypeScript Developer",
-    "MERN Stack Developer",
-    "Pakistan Developer",
-    "Islamabad Developer",
-    "AI Engineer",
-    "AI Fullstack Developer",
-  ],
-  authors: [{ name: "Alyan Hanif" }],
-  creator: "Alyan Hanif",
-  publisher: "Alyan Hanif",
+  description: profile.siteDescription,
+  keywords: profile.keywords,
+  authors: [{ name: profile.name }],
+  creator: profile.name,
+  publisher: profile.name,
   openGraph: {
-    title: "Alyan Hanif | AI Full Stack Engineer",
-    description:
-      "AI Full Stack Engineer specializing in Next.js, React, TypeScript and Node.js.",
-    url: "https://alyan.dev/",
-    siteName: "Alyan Hanif Portfolio",
-    images: [
-      {
-        url: "/alyan.png",
-        width: 1200,
-        height: 630,
-        alt: "Alyan Hanif Portfolio",
-      },
-    ],
+    title: `${profile.name} | ${profile.title}`,
+    description: profile.shortDescription,
+    url: profile.siteUrl,
+    siteName: profile.siteName,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alyan Hanif | AI Full Stack Engineer",
-    description:
-      "AI Full Stack Engineer specializing in Next.js, React, TypeScript and Node.js.",
-    images: ["/alyan.png"],
+    title: `${profile.name} | ${profile.title}`,
+    description: profile.shortDescription,
+    site: profile.twitterHandle,
+    creator: profile.twitterHandle,
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://alyan.dev/",
+    canonical: profile.siteUrl,
   },
 };
 
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Alyan Hanif",
-  alternateName: ["Muhammad Alyan", "Alyan"],
-  url: "https://alyan.dev/",
-  jobTitle: "AI Full Stack Engineer",
-  sameAs: [
-    "https://www.linkedin.com/in/alyan-hanif-2542b11ba/",
-    "https://www.linkedin.com/in/alyan-hanif/",
-    "https://github.com/MuhammadAlyan1",
-    "https://x.com/AlyanDeveloper",
-    "https://www.fiverr.com/alyan_hanif",
-    "https://www.upwork.com/freelancers/~01bf5a1ce43634bf45",
-    "https://alyan.vercel.app/",
-  ],
-  knowsAbout: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Node.js",
-    "AI Full Stack Engineering",
-    "Full Stack Development",
-  ],
+export const viewport: Viewport = {
+  themeColor: profile.colors.background,
 };
 
-const websiteJsonLd = {
+const personId = `${profile.siteUrl}/#person`;
+const websiteId = `${profile.siteUrl}/#website`;
+
+const schemaGraph = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Alyan Hanif",
-  alternateName: "Alyan Hanif Portfolio",
-  url: "https://alyan.dev/",
-  author: {
-    "@type": "Person",
-    name: "Alyan Hanif",
-  },
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${profile.siteUrl}/#profilepage`,
+      url: profile.siteUrl,
+      name: `${profile.name} | ${profile.title}`,
+      isPartOf: { "@id": websiteId },
+      mainEntity: { "@id": personId },
+    },
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: profile.name,
+      alternateName: profile.alternateNames,
+      url: profile.siteUrl,
+      image: `${profile.siteUrl}${profile.portraitPath}`,
+      jobTitle: profile.title,
+      email: `mailto:${profile.email}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: profile.location.city,
+        addressCountry: profile.location.countryCode,
+      },
+      worksFor: {
+        "@type": "Organization",
+        name: profile.employer,
+      },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: profile.education,
+      },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: profile.title,
+      },
+      sameAs: profile.socials.map((social) => social.url),
+      knowsAbout: profile.knowsAbout,
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: profile.name,
+      alternateName: profile.siteName,
+      url: profile.siteUrl,
+      publisher: { "@id": personId },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -120,18 +118,7 @@ export default function RootLayout({
             },
           }}
         />
-        <Script
-          id="person-schema"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
-        <Script
-          id="website-schema"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
+        <JsonLd data={schemaGraph} />
       </body>
     </html>
   );

@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { profile } from "@/data/profile";
 import AlyanImage from "../../../assets/pictures/alyan.png";
 import TailwindIcon from "../../../assets/icons/technologies/tailwind.svg";
 import PythonIcon from "../../../assets/icons/technologies/python.svg";
 import NodeIcon from "../../../assets/icons/technologies/node.svg";
 import ReactIcon from "../../../assets/icons/technologies/react.svg";
+
 const HeroSection = () => {
   return (
     <div
@@ -13,15 +15,16 @@ const HeroSection = () => {
       className="relative mx-auto flex h-[100vh] max-w-screen-2xl flex-col px-8 pt-8 md:items-center md:justify-between lg:flex-row"
     >
       <section className="relative">
-        <h1 className="text-2xl font-bold text-accent sm:text-xl xl:text-3xl">
-          Alyan Hanif
+        <h1>
+          <span className="block text-2xl font-bold text-accent sm:text-xl xl:text-3xl">
+            {profile.name}
+          </span>
+          <span className="my-2 block text-3xl font-bold text-primaryText sm:text-5xl xl:text-6xl">
+            {profile.title}
+          </span>
         </h1>
-        <p className="my-2 text-3xl font-bold text-primaryText sm:text-5xl xl:text-6xl">
-          AI Full Stack Engineer
-        </p>
         <p className="my-2 max-w-[60ch] text-base text-secondaryText sm:text-lg xl:text-[20px]">
-          I build AI-powered systems, automation workflows, and scalable web
-          applications that reduce manual work and improve business operations.
+          {profile.heroIntro}
         </p>
         <a
           href="/#contact-me"
@@ -35,7 +38,7 @@ const HeroSection = () => {
           <Image
             src={AlyanImage}
             priority={true}
-            alt="Alyan Hanif — AI Full Stack Engineer"
+            alt={`${profile.name} — ${profile.title}`}
             className="mt-16"
           />
         </div>
